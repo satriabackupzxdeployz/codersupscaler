@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodersUpscaler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CodersUpscaler</h1>
+        <form id="upscalerForm">
+            <div class="form-group">
+                <label for="imageUrl">URL Gambar</label>
+                <input type="url" id="imageUrl" required placeholder="https://domain.com/gambar.jpg">
+            </div>
+            
+            <div class="form-group">
+                <label for="resolution">Pilih Resolusi</label>
+                <select id="resolution">
+                    <option value="4k">4K</option>
+                    <option value="6k">6K</option>
+                    <option value="8k">8K</option>
+                </select>
+            </div>
+
+            <button type="submit" id="startBtn">Start</button>
+        </form>
+
+        <div id="loading" class="hidden">
+            <p>Memproses gambar... Harap tunggu.</p>
+        </div>
+
+        <div id="resultContainer" class="hidden">
+            <p id="successMessage"></p>
+            <img id="resultImage" src="" alt="Hasil Upscale">
+            <a id="downloadBtn" href="" target="_blank">Download Hasil</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
